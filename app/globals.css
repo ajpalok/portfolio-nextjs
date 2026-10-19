@@ -129,11 +129,10 @@ html.intro-played #page-loader-overlay {
   margin-bottom: 1rem;
 }
 
+/* ── project-content headings ── */
 .project-content h1,
 .project-content h2,
-.project-content h3,
-.article-content h2,
-.article-content h3 {
+.project-content h3 {
   color: var(--color-ink);
   margin-top: 1.5rem;
   margin-bottom: 0.85rem;
@@ -141,12 +140,56 @@ html.intro-played #page-loader-overlay {
   letter-spacing: -0.01em;
 }
 
+/* ── article-content heading scale ───────────────────────────────────────
+   Full h1–h6 ladder. h1 is a fallback (using it alongside the page <h1>
+   is poor practice, but it should still render visibly larger than h2).
+   Scale: 2.1 → 1.75 → 1.4 → 1.15 → 1rem bold → 0.9rem bold/caps.
+   ─────────────────────────────────────────────────────────────────────── */
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  color: var(--color-ink);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.article-content h1 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  border-bottom: 2px solid var(--color-line);
+  padding-bottom: 0.5rem;
+}
+
 .article-content h2 {
   font-size: 1.75rem;
   border-bottom: 1px solid var(--color-line);
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
 }
-.article-content h3 { font-size: 1.35rem; }
+
+.article-content h3 {
+  font-size: 1.4rem;
+}
+
+.article-content h4 {
+  font-size: 1.15rem;
+}
+
+.article-content h5 {
+  font-size: 1rem;
+}
+
+.article-content h6 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-2);
+}
 
 .project-content ul,
 .project-content ol,
